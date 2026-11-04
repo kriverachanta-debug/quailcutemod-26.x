@@ -1,13 +1,4 @@
 {
-  "itemGroup.quailcutemod": "Example Mod Tab",
-  "block.quailcutemod.example_block": "Example Block",
-  "item.quailcutemod.example_item": "Example Item",
+  "item.quailcutemod.azurite": "Huevo de codorniz"
 
-  "quailcutemod.configuration.title": "Quail Cute Mod Configs",
-  "quailcutemod.configuration.section.quailcutemod.common.toml": "Quail Cute Mod Configs",
-  "quailcutemod.configuration.section.quailcutemod.common.toml.title": "Quail Cute Mod Configs",
-  "quailcutemod.configuration.items": "Item List",
-  "quailcutemod.configuration.logDirtBlock": "Log Dirt Block",
-  "quailcutemod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "quailcutemod.configuration.magicNumber": "Magic Number"
 }

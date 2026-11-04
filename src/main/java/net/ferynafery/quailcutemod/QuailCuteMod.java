@@ -1,5 +1,6 @@
 package net.ferynafery.quailcutemod;
 
+import net.ferynafery.quailcutemod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -16,7 +17,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-
+// Hola
 // El valor aquí debe coincidir con una entrada en el archivo META-INF/neoforge.mods.toml
 @Mod(QuailCuteMod.MOD_ID)
 public class QuailCuteMod {
@@ -30,6 +31,8 @@ public class QuailCuteMod {
     public QuailCuteMod(IEventBus modEventBus, ModContainer modContainer) {
         // Registramos el metodo commonSetup para que se ejecute durante la carga del mod.
         modEventBus.addListener(this::commonSetup);
+
+        ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -47,7 +50,9 @@ public class QuailCuteMod {
 
     // Añadimos el objeto correspondiente a nuestro bloque a la pestaña de bloques de construcción.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.AZURITE);
+        }
     }
 
     // Podemos utilizar @SubscribeEvent y dejar que el Event Bus descubra automáticamente los métodos que debe ejecutar.
