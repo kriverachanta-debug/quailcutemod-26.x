@@ -11,6 +11,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> QUAIL_EGG = ITEMS.registerSimpleItem("quail_egg");
 
+    public static final DeferredItem<Item> QUAIL_TAB_ICON = ITEMS.registerSimpleItem("quail_tab_icon");
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
