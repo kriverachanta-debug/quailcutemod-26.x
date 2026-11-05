@@ -9,7 +9,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(QuailCuteMod.MOD_ID);
 
-    public static final DeferredItem<Item> AZURITE = ITEMS.registerSimpleItem("azurite" );
+    public static final DeferredItem<Item> QUAIL_EGG = ITEMS.registerSimpleItem("quail_egg");
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
