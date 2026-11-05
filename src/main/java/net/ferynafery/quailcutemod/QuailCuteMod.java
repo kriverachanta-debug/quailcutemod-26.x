@@ -50,7 +50,7 @@ public class QuailCuteMod {
     // Añadimos el objeto correspondiente a nuestro bloque a la pestaña de bloques de construcción.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            // event.accept(ModItems.AZURITE);
+            event.accept(ModItems.QUAIL_EGG);
             
         }
     }
