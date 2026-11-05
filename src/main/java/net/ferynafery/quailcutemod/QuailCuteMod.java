@@ -1,5 +1,6 @@
 package net.ferynafery.quailcutemod;
 
+import net.ferynafery.quailcutemod.creativemodetab.ModCreativeModeTabs;
 import net.ferynafery.quailcutemod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -31,6 +32,8 @@ public class QuailCuteMod {
         // Registramos el metodo commonSetup para que se ejecute durante la carga del mod.
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
@@ -50,7 +53,7 @@ public class QuailCuteMod {
     // Añadimos el objeto correspondiente a nuestro bloque a la pestaña de bloques de construcción.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.QUAIL_EGG);
+            //event.accept(ModItems.QUAIL_EGG);
             
         }
     }

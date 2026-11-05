@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "quailcutemod:item/azurite"
+    "layer0": "quailcutemod:item/quail_tab_icon"
   }
 }
