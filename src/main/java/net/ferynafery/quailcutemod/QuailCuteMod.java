@@ -17,17 +17,16 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-// Hola
-// El valor aquí debe coincidir con una entrada en el archivo META-INF/neoforge.mods.toml
+
 @Mod(QuailCuteMod.MOD_ID)
 public class QuailCuteMod {
     // Definimos el ID del mod en un lugar común para que todas las partes del código puedan utilizarlo.
     public static final String MOD_ID = "quailcutemod";
-    // Hacemos referencia directa a un registrador (logger) de SLF4J.
+
     public static final Logger LOGGER = LogUtils.getLogger();
 
     // El constructor de la clase del mod es el primer código que se ejecuta cuando se carga nuestro mod.
-    // FML reconocerá automáticamente algunos tipos de parámetros, como IEventBus o ModContainer, y los proporcionará.
+    // FML reconocerá automáticamente algunos tipos de parámetros, como IEventBus o ModContainer
     public QuailCuteMod(IEventBus modEventBus, ModContainer modContainer) {
         // Registramos el metodo commonSetup para que se ejecute durante la carga del mod.
         modEventBus.addListener(this::commonSetup);
@@ -51,7 +50,8 @@ public class QuailCuteMod {
     // Añadimos el objeto correspondiente a nuestro bloque a la pestaña de bloques de construcción.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.AZURITE);
+            // event.accept(ModItems.AZURITE);
+            
         }
     }
 

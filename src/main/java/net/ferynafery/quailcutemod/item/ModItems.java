@@ -11,8 +11,6 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZURITE = ITEMS.registerSimpleItem("azurite" );
 
-
-
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }
