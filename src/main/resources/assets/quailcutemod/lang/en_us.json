@@ -1,5 +1,8 @@
 {
   "item.quailcutemod.quail_egg":"Quail egg",
-  "creativetab.quailcutemod.quail_items": "Quail items"
-
+  "item.quailcutemod.fried_quail_egg": "Fried quail egg",
+  "creativetab.quailcutemod.quail_items": "Quail items",
+  "item.quailcutemod.water_quail_egg_bucket": "Water Bucket with Quail Eggs",
+  "tooltip.quailcutemod.water_quail_egg_bucket.contains": "Contains: %s quail eggs",
+  "item.quailcutemod.boiled_quail_egg": "Boiled quail egg"
 }

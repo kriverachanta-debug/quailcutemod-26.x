@@ -21,8 +21,9 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.quailcutemod.quail_items"))
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.QUAIL_EGG);
-
+                        output.accept(ModItems.QUAIL_EGG.get());
+                        output.accept(ModItems.FRIED_QUAIL_EGG.get());
+                        output.accept(ModItems.BOILED_QUAIL_EGG.get());
                     })
                     .build()
     );

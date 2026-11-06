@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quailcutemod:item/boiled_quail_egg"
+  }
+}
