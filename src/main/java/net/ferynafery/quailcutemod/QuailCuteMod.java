@@ -1,5 +1,6 @@
 package net.ferynafery.quailcutemod;
 
+import net.ferynafery.quailcutemod.component.ModDataComponents;
 import net.ferynafery.quailcutemod.creativemodetab.ModCreativeModeTabs;
 import net.ferynafery.quailcutemod.item.ModItems;
 import org.slf4j.Logger;
@@ -19,6 +20,8 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+import net.ferynafery.quailcutemod.recipe.ModRecipes;
+
 @Mod(QuailCuteMod.MOD_ID)
 public class QuailCuteMod {
     // Definimos el ID del mod en un lugar común para que todas las partes del código puedan utilizarlo.
@@ -32,18 +35,16 @@ public class QuailCuteMod {
         // Registramos el metodo commonSetup para que se ejecute durante la carga del mod.
         modEventBus.addListener(this::commonSetup);
 
+        ModDataComponents.COMPONENTS.register(modEventBus);
+        ModRecipes.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
-
         // Registramos el metodo addCreative para añadir objetos a una pestaña del inventario creativo.
         modEventBus.addListener(this::addCreative);
-
         // Registramos el ModConfigSpec de nuestro mod para que FML pueda crear y cargar el archivo de configuración automáticamente.
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -53,7 +54,7 @@ public class QuailCuteMod {
     // Añadimos el objeto correspondiente a nuestro bloque a la pestaña de bloques de construcción.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            //event.accept(ModItems.QUAIL_EGG);
+
             
         }
     }

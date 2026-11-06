@@ -1,0 +1,10 @@
+{
+  "type": "quailcutemod:quail_egg_smelting",
+  "category": "food",
+  "ingredient": "quailcutemod:water_quail_egg_bucket",
+  "result": {
+    "id": "quailcutemod:boiled_quail_egg"
+  },
+  "experience": 0.1,
+  "cookingtime": 300
+}
